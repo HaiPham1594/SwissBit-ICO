@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Transaction</title>
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- ----- -->
+    <!-- Font awesome 5.7.2 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous"> <!-- ----- -->
+    <link rel="stylesheet" type="text/css" href="css/transaction.css">
+    <link rel="stylesheet" href="themify-icons/themify-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body class="home">
+    <div id="wrapper" class="toggled">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="dashboard.html" style="margin-top: auto;margin-bottom: auto;"><img src="img/header-icon.png"
+                            style="width: 65%;height: 50px;"></a>
+                </li>
+                <li>
+                    <img src="img/dashboard/b.png" class="slider-icon">
+                    <a href="tokenPurchase.html">Token Purchase</a>
+                </li>
+                <li>
+                    <img src="img/dashboard/user1.png" class="slider-icon">
+                    <a href="user.html">User</a>
+                </li>
+                <li>
+                    <img src="img/dashboard/transition1.png" class="slider-icon">
+                    <a href="transaction.html">Transaction</a>
+                </li>
+                <li>
+                    <img src="img/dashboard/marketing.png" class="slider-icon">
+                    <a href="marketing.html">Marketing Suite</a>
+                </li>
+                <li onclick="loadSetting()">
+                    <img src="img/dashboard/setting.png" class="slider-icon">
+                    <a href="setting.html">Setting</a>
+                </li>
+                <li>
+                    <img src="img/dashboard/airdrop.png" class="slider-icon">
+                    <a href="refund.html">Refund</a>
+                </li>
+                <li>
+                    <img src="img/dashboard/token.png" class="slider-icon">
+                    <a href="tokenDelivery.html">Token Delivery</a>
+                </li>
+                <li>
+                    <img src="img/dashboard/report.png" class="slider-icon">
+                    <a href="report.html">Report</a>
+                </li>
+                <li>
+                    <img src="img/dashboard/logout.png" class="slider-icon">
+                    <a href="#">Log out</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper" style="width: 100%;">
+                <div class="toggle-header container-fluid">
+                        <ul class="row menu">
+                          <li class="col-md-1" style="padding-left: 20px">
+                            <img
+                              src="img/dashboard/menu.png"
+                              id="menu-toggle"
+                              class="dashboard-header-icon"
+                            />
+                          </li>
+                          <li class="col-md-8" style="display: flex">
+                            <!-- <img src="img/dashboard/search.png" class="dashboard-header-icon" id="search-toggle"> -->
+                            <input
+                              class="form-control"
+                              id="search-form"
+                              type="search"
+                              placeholder="Search"
+                              aria-label="Search"
+                            />
+                          </li>
+                          <li
+                            class="col-md-1"
+                            style="display: flex; justify-content: flex-end; padding: 0"
+                          >
+                            <img
+                              src="img/dashboard/bell.png"
+                              class="dashboard-header-icon"
+                              data-container="body"
+                              data-toggle="popover"
+                              data-placement="bottom"
+                              data-content="You have 20 notifications"
+                            />
+                          </li>
+                          <li
+                            class="col-md-1"
+                            style="display: flex; justify-content: center; padding: 0"
+                          >
+                            <img
+                              src="img/dashboard/wallet.png"
+                              class="dashboard-header-icon"
+                              data-toggle="popover"
+                              data-html="true"
+                              data-placement="bottom"
+                              data-content="<em>btc:</em> <b>2.7</b> <span><img src='img/dashboard/b_blue.png' class='bitcoin-tiny'></span>"
+                            />
+                          </li>
+                          <li class="col-md-1" style="padding: 0">
+                            <div style="padding-top: 4px">
+                              <div
+                                class="adminCircle"
+                                data-toggle="tooltip"
+                                data-placement="bottom"
+                                title="Admin"
+                              >
+                                <img
+                                  src="img/dashboard/admin.png"
+                                  class="dashboard-header-icon"
+                                  data-toggle="modal"
+                                  data-target="#exampleModal"
+                                />
+                              </div>
+                              <div
+                                class="modal fade"
+                                id="exampleModal"
+                                tabindex="-1"
+                                role="dialog"
+                                aria-labelledby="exampleModalLabel"
+                                aria-hidden="true"
+                              >
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">
+                                        Confirm Log Out Dashboard Site
+                                      </h5>
+                                      <button
+                                        type="button"
+                                        class="close"
+                                        data-dismiss="modal"
+                                        aria-label="Close"
+                                      >
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <b>You want to Log out ?</b>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-primary">
+                                        Log out
+                                      </button>
+                                      <button
+                                        type="button"
+                                        class="btn btn-secondary"
+                                        data-dismiss="modal"
+                                      >
+                                        Cancel
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                </div>
+
+            <div class="card no-padding-top">
+                <div class="card-header no-boder">
+                    <strong class="font-sm">User Transactions</strong>
+                </div>
+                <div class="info container">
+                    <div class="table-responsive">
+                        <table class="table" id="app">
+                            <!-- <caption>List of users</caption> -->
+                            <thead>
+                                <tr>
+                                    <th scope="col">TRANX NO</th>
+                                    <th scope="col">TOKENS</th>
+                                    <th scope="col">AMOUNT</th>
+                                    <th scope="col">USD AMOUNT</th>
+                                    <th scope="col">FROM</th>
+                                    <th scope="col">TYPE</th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        <div>
+                                            <div class="data-state data-state-pending">
+                                                <span class="d-none">Approved</span>
+                                            </div>
+                                            <div>
+                                                <div>TNX1002</div>
+                                                <div class="da">{{daytime}}</div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div>18,750</div>
+                                        <div>TWZ</div>
+                                    </td>
+                                    <td>
+                                        <div>50.00</div>
+                                        <div>ETH <i class="fas fa-info-circle"></i></div>
+                                    </td>
+                                    <td>
+                                        <div>245.52</div>
+                                        <div>USD <i class="fas fa-info-circle"></i></div>
+                                    </td>
+                                    <td>
+                                        <div>1FIT....4XQX</div>
+                                        <div>
+                                            <p><span class="datetime2">{{daytime2}}</span></p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-outline-success btn-trans">Purchase</button></td>
+                                    <td style="text-align:right;">
+                                        <button class="btn btn-primary">Pay now <i class="ti-wallet"></i></button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-trash"><i class="ti-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <div>
+                                            <div class="data-state data-state-approved">
+                                                <span class="d-none">Approved</span>
+                                            </div>
+                                            <div>
+                                                <div>TNX1002</div>
+                                                <div class="da">{{daytime}}</div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div>18,750</div>
+                                        <div>TWZ</div>
+                                    </td>
+                                    <td>
+                                        <div>50.00</div>
+                                        <div>ETH <i class="fas fa-info-circle"></i></div>
+                                    </td>
+                                    <td>
+                                        <div>245.52</div>
+                                        <div>USD <i class="fas fa-info-circle"></i></div>
+                                    </td>
+                                    <td>
+                                        <div>1FIT....4XQX</div>
+                                        <div>
+                                            <p><span class="datetime2">{{daytime2}}</span></p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-outline-success btn-trans">Purchase</button></td>
+                                    <td style="text-align:right;">
+                                        <button class="btn btn-primary">Pay now <i class="ti-wallet"></i></button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-eye"><i class="ti ti-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <div>
+                                            <div class="data-state data-state-canceled">
+                                                <span class="d-none">Approved</span>
+                                            </div>
+                                            <div>
+                                                <div>TNX1002</div>
+                                                <div class="da">{{daytime}}</div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div>18,750</div>
+                                        <div>TWZ</div>
+                                    </td>
+                                    <td>
+                                        <div>50.00</div>
+                                        <div>ETH <i class="fas fa-info-circle"></i></div>
+                                    </td>
+                                    <td>
+                                        <div>245.52</div>
+                                        <div>USD <i class="fas fa-info-circle"></i></div>
+                                    </td>
+                                    <td>
+                                        <div>1FIT....4XQX</div>
+                                        <div>
+                                            <p><span class="datetime2">{{daytime2}}</span></p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-outline-success btn-trans">Purchase</button></td>
+                                    <td style="text-align:right;">
+                                        <button class="btn btn-primary">Pay now <i class="ti-wallet"></i></button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-eye"><i class="ti ti-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <div>
+                                            <div class="data-state data-state-progress">
+                                                <span class="d-none">Approved</span>
+                                            </div>
+                                            <div>
+                                                <div>TNX1002</div>
+                                                <div class="da">{{daytime}}</div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div>18,750</div>
+                                        <div>TWZ</div>
+                                    </td>
+                                    <td>
+                                        <div>50.00</div>
+                                        <div>ETH <i class="fas fa-info-circle"></i></div>
+                                    </td>
+                                    <td>
+                                        <div>245.52</div>
+                                        <div>USD <i class="fas fa-info-circle"></i></div>
+                                    </td>
+                                    <td>
+                                        <div>1FIT....4XQX</div>
+                                        <div>
+                                            <p><span class="datetime2">{{daytime2}}</span></p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-outline-success btn-trans">Purchase</button></td>
+                                    <td style="text-align: right">
+                                        <button class="btn btn-primary">Pay now 
+                                            <i class="ti-wallet"></i>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-eye"><i class="ti ti-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <div>
+                                            <div class="data-state data-state-approved">
+                                                <span class="d-none">Approved</span>
+                                            </div>
+                                            <div>
+                                                <div>TNX1002</div>
+                                                <div class="da">{{daytime}}</div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div>18,750</div>
+                                        <div>TWZ</div>
+                                    </td>
+                                    <td>
+                                        <div>50.00</div>
+                                        <div>ETH <i class="fas fa-info-circle"></i></div>
+                                    </td>
+                                    <td>
+                                        <div>245.52</div>
+                                        <div>USD <i class="fas fa-info-circle"></i></div>
+                                    </td>
+                                    <td>
+                                        <div>1FIT....4XQX</div>
+                                        <div>
+                                            <p><span class="datetime2">{{daytime2}}</span></p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-outline-primary btn-trans">Bonus</button></td>
+                                    <td style="text-align: right">
+                                        <button class="btn btn-primary">Pay now 
+                                            <i class="ti-wallet"></i>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-eye"><i class="ti ti-eye"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <nav aria-label="...">
+                                <ul class="pagination">
+                                    <li class="page-item previous">
+                                        <a class="page-link" href="#" tabindex="-1">Prev</a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">2</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">3</a>
+                                    </li>
+                                    <li class="page-item next">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                        </nav>                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/dashboard.js"></script>
+    <script src="script/transaction.js"></script>
+    <script>
+            $(function() {
+              $('[data-toggle="popover"]').popover();
+              $('[data-toggle="tooltip"]').tooltip();
+            });
+          </script>
+</body>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Marketing Suite</title>
+	<!-- Bootstrap 4 -->
+	<link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+	<!-- Font awesome 5.7.2 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/marketing.css">
+
+</head>
+
+<body class="home">
+	<div id="wrapper" class="toggled">
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="dashboard.html" style="margin-top: auto;margin-bottom: auto;"><img src="img/header-icon.png" style="width: 65%;height: 50px;"></a> 
+				</li>
+				<li>
+					<img src="img/dashboard/b.png" class="slider-icon">
+					<a href="tokenPurchase.html">Token Purchase</a>
+				</li>
+				<li>
+					<img src="img/dashboard/user1.png" class="slider-icon">
+					<a href="user.html">User</a>
+				</li>
+				<li>
+					<img src="img/dashboard/transition1.png" class="slider-icon">
+					<a href="transaction.html">Transaction</a>
+				</li>
+				<li>
+					<img src="img/dashboard/marketing.png" class="slider-icon">
+					<a href="marketing.html">Marketing Suite</a>
+				</li>
+				<li onclick="loadSetting()">
+					<img src="img/dashboard/setting.png" class="slider-icon">
+					<a href="setting.html">Setting</a>
+				</li>
+				<li>
+					<img src="img/dashboard/airdrop.png" class="slider-icon">
+					<a href="refund.html">Refund</a>
+				</li>
+				<li>
+					<img src="img/dashboard/token.png" class="slider-icon">
+					<a href="tokenDelivery.html">Token Delivery</a>
+				</li>
+				<li>
+					<img src="img/dashboard/report.png" class="slider-icon">
+					<a href="report.html">Report</a>
+				</li>
+				<li>
+					<img src="img/dashboard/logout.png" class="slider-icon">
+					<a href="#">Log out</a>
+				</li>
+			</ul>
+		</div>
+		<!-- /#sidebar-wrapper -->
+		<!-- Page Content -->
+		<div id="page-content-wrapper" style="width: 100%;">
+				<div class="toggle-header container-fluid">
+						<ul class="row menu">
+						  <li class="col-md-1" style="padding-left: 20px">
+							<img
+							  src="img/dashboard/menu.png"
+							  id="menu-toggle"
+							  class="dashboard-header-icon"
+							/>
+						  </li>
+						  <li class="col-md-8" style="display: flex">
+							<!-- <img src="img/dashboard/search.png" class="dashboard-header-icon" id="search-toggle"> -->
+							<input
+							  class="form-control"
+							  id="search-form"
+							  type="search"
+							  placeholder="Search"
+							  aria-label="Search"
+							/>
+						  </li>
+						  <li
+							class="col-md-1"
+							style="display: flex; justify-content: flex-end; padding: 0"
+						  >
+							<img
+							  src="img/dashboard/bell.png"
+							  class="dashboard-header-icon"
+							  data-container="body"
+							  data-toggle="popover"
+							  data-placement="bottom"
+							  data-content="You have 20 notifications"
+							/>
+						  </li>
+						  <li
+							class="col-md-1"
+							style="display: flex; justify-content: center; padding: 0"
+						  >
+							<img
+							  src="img/dashboard/wallet.png"
+							  class="dashboard-header-icon"
+							  data-toggle="popover"
+							  data-html="true"
+							  data-placement="bottom"
+							  data-content="<em>btc:</em> <b>2.7</b> <span><img src='img/dashboard/b_blue.png' class='bitcoin-tiny'></span>"
+							/>
+						  </li>
+						  <li class="col-md-1" style="padding: 0">
+							<div style="padding-top: 4px">
+							  <div
+								class="adminCircle"
+								data-toggle="tooltip"
+								data-placement="bottom"
+								title="Admin"
+							  >
+								<img
+								  src="img/dashboard/admin.png"
+								  class="dashboard-header-icon"
+								  data-toggle="modal"
+								  data-target="#exampleModal"
+								/>
+							  </div>
+							  <div
+								class="modal fade"
+								id="exampleModal"
+								tabindex="-1"
+								role="dialog"
+								aria-labelledby="exampleModalLabel"
+								aria-hidden="true"
+							  >
+								<div class="modal-dialog" role="document">
+								  <div class="modal-content">
+									<div class="modal-header">
+									  <h5 class="modal-title" id="exampleModalLabel">
+										Confirm Log Out Dashboard Site
+									  </h5>
+									  <button
+										type="button"
+										class="close"
+										data-dismiss="modal"
+										aria-label="Close"
+									  >
+										<span aria-hidden="true">&times;</span>
+									  </button>
+									</div>
+									<div class="modal-body">
+									  <b>You want to Log out ?</b>
+									</div>
+									<div class="modal-footer">
+									  <button type="button" class="btn btn-primary">
+										Log out
+									  </button>
+									  <button
+										type="button"
+										class="btn btn-secondary"
+										data-dismiss="modal"
+									  >
+										Cancel
+									  </button>
+									</div>
+								  </div>
+								</div>
+							  </div>
+							</div>
+						  </li>
+						</ul>
+					</div>
+
+			<div class="card no-padding-top" style="background: #F1F1F1;">
+				<div class="card-header no-boder" style="background: #F8F8F8;">
+					<strong class="font-sm">Email Campaigns</strong>
+				</div>
+				<div class="row justify-content-between info">
+					<div class="col-auto-xl-2 dash-item text-center">
+						<div class="item-header flexi">
+							<img src="Backend/Dashboard/Group 40@2x.png" class="bitcoin">
+							<span class="font-md">No. of User</span>
+						</div>
+						<div class="item-body">
+							<p class="font-md font-weight-bold item-content">20</p>
+						</div>
+					</div>
+
+					<div class="col-auto-xl-2 dash-item text-center">
+						<div class="item-header flexi">
+							<img src="Backend/Dashboard/Group-coin.png" class="bitcoin">
+							<span class="font-md">Total Campaigns</span>
+						</div>
+						<div class="item-body">
+							<p class="font-md font-weight-bold item-content">20000</p>
+						</div>
+					</div>
+
+					<div class="col-auto-xl-2 dash-item text-center">
+						<div class="item-header flexi">
+							<img src="Backend/Dashboard/Path 37@2x.png" class="bitcoin">
+							<span class="font-md">Campaign Sent</span>
+						</div>
+						<div class="item-body">
+							<p class="font-md font-weight-bold item-content">20000</p>
+						</div>
+					</div>
+
+					<div class="col-auto-xl-2 dash-item text-center">
+						<div class="item-header">
+							<img src="Backend/Dashboard/Group-coin.png" class="bitcoin">
+							<span class="font-md">Campaigns in Draft</span>
+						</div>
+						<div class="item-body">
+							<p class="font-md font-weight-bold item-content">1</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row justify-content-between info">
+					<div class="col-auto-xl info-item text-center flexi">
+						<div style="padding: 40px;">
+							<img src="img/trade-mining.png" alt="" class="group">
+						</div>
+					</div>
+
+					<div class="col-auto-xl info-item text-center">
+						<div class="item-header">
+							<img src="img/dashboard/b_blue.png" class="bitcoin">
+							<span class="font-sm">Email Campaigns</span>
+						</div>
+						<div class="item-body" style="padding-top: 100px;">
+							<img src="img/dashboard/marketing_blue.png" alt="" class="market">
+						</div>
+					</div>
+				</div>
+				<div class="card-body">
+					<div class="tran-content bg-white">
+						<table class="table text-center">
+							<div class="item-header flexi">
+								<img src="img/dashboard/b_blue.png" class="bitcoin">
+								<span class="font-sm" style="font-weight: bold">Email Campaigns</span>
+							</div>
+							<p class="text-center font-italic">Depending on how many tokens are hold by the users, they
+								obtain
+								following statuses</p>
+							<thead>
+								<th>S No</th>
+								<th>Date</th>
+								<th>Subject</th>
+								<th>User Count</th>
+								<th>Details</th>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>01/01/2019</td>
+									<td>Test mail for attatchment image</td>
+									<td>5 ETH</td>
+									<td>32</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>01/01/2019</td>
+									<td>Test mail for attatchment image</td>
+									<td>5 ETH</td>
+									<td>32</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>01/01/2019</td>
+									<td>Test mail for attatchment image</td>
+									<td>5 ETH</td>
+									<td>32</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>01/01/2019</td>
+									<td>Test mail for attatchment image</td>
+									<td>5 ETH</td>
+									<td>32</td>
+								</tr>
+								<tr>
+									<td colspan="6" class="button-group">
+										<button class="btn btn-white">1</button>
+										<button class="btn btn-white">2</button>
+										<button class="btn btn-white">3</button>
+										<button class="btn btn-white">4</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="card-header no-boder" style="background: #F8F8F8;">
+					<strong class="font-sm">Create a new Email Campaigns</strong>
+					<p class="sub-title font-italic">
+						Configure the basic details about your token dashboard Configure the basic details about
+						your token dashboard Configure the basic details about your token dashboard
+					</p>
+				</div>
+				<div class="card-body">
+					<form action="">
+						<div class="form-group">
+							<label for="" style="font-weight: bold">Send to</label>
+							<select class="form-control">
+								<option selected>Choose a user group</option>
+								<option>All users</option>
+								<option>User who have purchased tokens</option>
+								<option>User who haven't purchased tokens</option>
+								<option>User who have purchased tokens within these date</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="" style="font-weight: bold">Campaign subject line</label>
+							<input type="text" class="form-control"></input>
+						</div>
+						<div class="form-group">
+							<label for="" style="font-weight: bold">Email Campaign Content</label>
+							<textarea rows="10" class="form-control">12321654645</textarea>
+						</div>
+					</form>
+					<button class="btn btn-send bc">Send</button>
+					<button class="btn btn-draft bc">Save as draft</button>
+					<button class="btn btn-mail bc">Schedule Mail</button>
+					<button class="btn btn-cancel bc">Cancel</button>
+				</div>
+
+				<div class="card-header no-boder" style="background: #F8F8F8;">
+					<strong class="font-sm">Email Campaign draft</strong>
+					<p class="sub-title font-italic">
+						Configure the basic details about your token dashboard Configure the basic details about
+						your token dashboard Configure the basic details about your token dashboard
+					</p>
+				</div>
+				<div class="row justify-content-between info">
+					<div class="col-auto-xl-3 dash-item text-center">
+						<div class="item-header flexi">
+							<img src="Backend/Dashboard/Group 40@2x.png" class="bitcoin">
+							<span class="font-sm">Total Mails in Draft</span>
+						</div>
+						<div class="item-body">
+							<p class="font-md font-weight-bold item-content">20</p>
+						</div>
+					</div>
+
+					<div class="col-auto-xl-3 dash-item text-center">
+						<div class="item-header flexi">
+							<img src="Backend/Dashboard/Group 40@2x.png" class="bitcoin">
+							<span class="font-sm">Mails sent</span>
+						</div>
+						<div class="item-body">
+							<p class="font-md font-weight-bold item-content">20000</p>
+						</div>
+					</div>
+
+					<div class="col-auto-xl-3 dash-item text-center">
+						<div class="item-header flexi">
+							<img src="Backend/Dashboard/Path 37@2x.png" class="bitcoin">
+							<span class="font-sm">Mails Not Sent</span>
+						</div>
+						<div class="item-body">
+							<p class="font-md font-weight-bold item-content">20000</p>
+						</div>
+					</div>
+				</div>
+				<div class="card-body">
+					<div class="tran-content bg-white">
+						<table class="table text-center">
+							<thead>
+								<th>S No</th>
+								<th>Date</th>
+								<th>Subject</th>
+								<th>Action</th>
+							</thead>
+							<tbody>
+								<tr class="tr-btn">
+									<td>1</td>
+									<td>01/01/2019</td>
+									<td>Test mail for attatchment image</td>
+									<td id="show-btn"><button class="btn btn-delete bc">Delete</button><button class="btn btn-send bc">Send email</button></td>
+								</tr>
+								<tr class="tr-btn">
+									<td>2</td>
+									<td>01/01/2019</td>
+									<td>Test mail for attatchment image</td>
+									<td><button class="btn btn-delete bc">Delete</button><button class="btn btn-send bc">Send email</button></td>
+								</tr>
+								<tr class="tr-btn">
+									<td>3</td>
+									<td>01/01/2019</td>
+									<td>Test mail for attatchment image</td>
+									<td><button class="btn btn-delete bc">Delete</button><button class="btn btn-send bc">Send email</button></td>
+								</tr>
+								<tr class="tr-btn">
+									<td>4</td>
+									<td>01/01/2019</td>
+									<td>Test mail for attatchment image</td>
+									<td><button class="btn btn-delete bc">Delete</button><button class="btn btn-send bc">Send email</button></td>
+								</tr>
+								<tr>
+									<td colspan="6" class="button-group">
+										<button class="btn btn-white">1</button>
+										<button class="btn btn-white">2</button>
+										<button class="btn btn-white">3</button>
+										<button class="btn btn-white">4</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	<script src="script/dashboard.js"></script>
+	<script>
+			$(function() {
+			  $('[data-toggle="popover"]').popover();
+			  $('[data-toggle="tooltip"]').tooltip();
+			});
+	</script>
+</body>
+</html>

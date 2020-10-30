@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Index</title>
+  <!-- Bootstrap 4 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!-- Font awesome 5.7.2 -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+</head>
+
+<body id="app">
+  <nav class="navbar navbar-expand-lg bg-blue">
+    <div class="header-icon">
+      <img src="img/header-icon.png" style="height: 35px;" />
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
+      <i class="fa fa-bars" style="color: white;"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav row-direction">
+        <li class="nav-item active"><a class="nav-link" href="#">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">WHITEPAPER</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">TOKEN SALE</a></li>
+        <li class="nav-item"><a class="nav-link" href="#roadmap">ROAD MAP</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">MVP</a></li>
+        <li class="nav-item"><a class="nav-link" href="#team">TEAM</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <span class="fa fa-globe header-icon-style"></span>
+          </a>
+          <div class="nav-dropdown">
+            <a href="https://icostudio.online/wp-content/uploads/Swissbit/#" class="nav-link">Français</a>
+            <a href="https://icostudio.online/wp-content/uploads/Swissbit/#" class="nav-link">English</a>
+          </div>
+        </li>
+      </ul>
+      <div class="button-nav">
+        <button class="btn my-2 my-sm-0 btn-login" type="submit">
+          LOG IN
+        </button>
+        <button class="btn my-2 my-sm-0 btn-sign-up" type="submit">
+          SIGN UP
+        </button>
+      </div>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main-content">
+    <div class="home" style="height: 600px;">
+      <img src="Frontend/Frontend/bg.png" style="width: 100%;height: 600px;z-index: 1;position: absolute;" />
+      <div class="text-center header-home row">
+        <div class="col-md-5">
+          <img src="Frontend/Frontend/Phone.png" style="height: 400px;z-index: 3;position: relative;" />
+        </div>
+        <div class="col-md-7">
+          <div class="background-image">
+            <img src="Frontend/Frontend/sale-title.png" style=" height: 55px;z-index: 3;position: relative;" />
+            <div countdown="" data-date="Feb 14 2020 07:30:00" class="row" style="margin-bottom: 30px">
+              <div class="col-md-3 timer">
+                <div data-days=""></div>
+                <div>DAYS</div>
+              </div>
+              <div class="col-md-3 timer">
+                <div data-hours=""></div>
+                <div>HOURS</div>
+              </div>
+              <div class="col-md-3 timer">
+                <div data-minutes=""></div>
+                <div>MINUTES</div>
+              </div>
+              <div class="col-md-3 timer">
+                <div data-seconds=""></div>
+                <div>SECONDS</div>
+              </div>
+            </div>
+            <img src="Frontend/Frontend/sale-bar.png" alt="" style=" height: 60px;z-index: 3;position: relative;" />
+            <button class="btn btn-token" style=" height: 30px;z-index: 3;position: relative; ">BUY TOKEN NOW</button>
+            <img src="Frontend/Frontend/sale-2.png" alt="" style=" height: 40px;z-index: 3;position: relative; margin-top: 10px">
+          </div>
+        </div>
+      </div>
+      <div class="text-center row">
+        <div class="col-md-5  margin-top-sm">
+          <img src="img/swiss.png" style="z-index: 3;position: relative;" />
+          <p style="color: #E2B700;z-index: 3;position: relative;">
+            A Global Bank for everyone
+          </p>
+        </div>
+        <div class="col-md-7 text-left" style="display: flex; justify-content: center">
+          <img id="play-video-icon" src="img/play.png" class="play-icon" data-toggle="modal" href="#myModal1" />
+          <div class="" style="padding-left: 40px;">
+            <strong class="watch-text">Watch a Video</strong>
+            <p style="color: #E2B700;z-index: 3;position: relative;font-size: 13px;">
+              What and how it work
+            </p>
+          </div>
+          <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div>
+                    <video controls preload="auto" id="video1">
+                      <source src="https://icostudio.online/wp-content/uploads/Swissbit/video/Swissbit.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="infor background-gray text-center">
+      <img src="img/infor.png" style="width: 75%;" />
+    </div>
+
+    <div class="card">
+      <div class="header">
+        <h2>PREPAID CARDS</h2>
+        <!-- <img src="Frontend/Frontend/sale-2.png" alt=""> -->
+        <p>
+          Swissbit is proud to offer the following free bank card, Basic, Gold, Platinum depending
+          on how many tokens the user hold
+        </p>
+      </div>
+
+      <div class="card-imgs col-md-12" style="margin-top: 100px;">
+        <div class="card-item col-12 col-md-4">
+          <div class="block">
+            <img src="img/card-blue.png" />
+            <ul class="card-description">
+              <li>CAP Cash Back: 0.5%</li>
+              <li>Service Free: 2%</li>
+              <li>Free Shipping</li>
+            </ul>
+          </div>
+
+          <button class="btn btn-default my-2 my-sm-0 btn-card btn-card-blue" type="submit">
+            BUY NOW
+          </button>
+        </div>
+        <div class="card-item col-12 col-md-4">
+          <div class="block">
+            <img src="img/card-yellow.png" />
+            <ul class="card-description">
+              <li>CAP Cash Back: 0.5%</li>
+              <li>Service Free: 2%</li>
+              <li>Free Shipping</li>
+            </ul>
+          </div>
+          <button class="btn btn-default my-2 my-sm-0 btn-card btn-card-yellow" type="submit">
+            BUY NOW
+          </button>
+        </div>
+        <div class="card-item col-12 col-md-4">
+          <div class="block">
+            <img src="img/card-white.png" />
+            <ul class="card-description">
+              <li>CAP Cash Back: 0.5%</li>
+              <li>Service Free: 2%</li>
+              <li>Free Shipping</li>
+            </ul>
+          </div>
+          <button class="btn btn-default my-2 my-sm-0 btn-card btn-card-gray" type="submit">
+            BUY NOW
+          </button>
+        </div>
+      </div>
+      <div class="card-more col-md-12 text-center" style=" margin-top: 50px;">
+        <p>See more details about our card program >>></p>
+      </div>
+    </div>
+
+    <div class="trade-mining background-gray">
+      <div class="header">
+        <h2>TRADE MINING</h2>
+        <p>
+          Trading fees generated from the Trade-Mining Zone will be rebated as SBTs back to traders
+        </p>
+      </div>
+      <div class="content container">
+        <div class="col-md-6">
+          <span>
+            <p>Transaction or "trade mining" is the latest form of
+              rewards that some minor exchange have been
+              furnishing on their customers - a form of rebate where
+              a customer earns (mines) the native token of the
+              exchange purely by placing trades.
+            </p>
+            <p>Transaction or "trade mining" is the latest form of
+              rewards that some minor exchange have been
+              furnishing on their customers - a form of rebate where
+              a customer earns (mines) the native token of the
+              exchange purely by placing trades. Swissbit Exchange has dropped exchange involved in this potentially
+              volumne
+              manipulate practice from the exchange-weighted
+              pricing of major pairs, including BTC/USDT, ETH/USDT,
+              SBT/USDT, SBT/USDT.
+            </p>
+            <p>
+              Once you have your SBT tokens, you can choose to sell
+              them back to company at the end of every single
+              business day and get their value in BTC or ETH.
+              Alternatively, the exchange itself encourages you to
+              hold onto your tokens and try to achieve the
+              supernode status at some point.
+            </p>
+          </span>
+        </div>
+        <div class="col-md-6" style="display: flex;align-items: center;">
+          <img class="trade-mining-icon" src="Frontend/Frontend/Group 60.png" />
+        </div>
+      </div>
+    </div>
+
+    <div class="lending-loan background-white">
+      <div class="header">
+        <h2>LENDING & LOAN</h2>
+        <p>
+          Instead of simply holding onto cryptocurrency and hoping it will appreciate, individuals and organizations
+          can lend up to half value of their assets and collect interest on it
+        </p>
+      </div>
+      <div class="content container">
+        <div class="col-md-6" style="display: flex;align-items: center;">
+          <img class="trade-mining-icon" src="Frontend/Frontend/Group 83.png" />
+        </div>
+        <div class="col-md-6">
+
+          <p>
+            Swissbit Exchange is a platform for secure and
+            convenient P2P transfers, instead of simply holding
+            onto crytocurrency and hoping it will appreciate,
+            individuals and organizations can lend up to half the
+            to-date value of their assets and collect interest on it.
+            Annual interest rates are 8 percent and the amount is
+            paid instantly to the lender. Meanwhile, borrowers
+            benefit from not having to rely exclusively on
+            traditional financial institutions.
+            One of the first offerings of its kind, Swissbit Exchange
+            insurance product providers peace of mind that your
+            valuable assets are as safe as possible from theft.
+            Inspired as a responses to the landmark breach of the
+            Mt. Gox exchange in Tokyo, this insurance is offered
+            through a partnership. It functions alongside other
+            protections including proof-of-address, KYC, AML, and
+            2-factor authentication to fend off a wide variety of
+            cybersecurity threats.
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="road-map background-gray" id="roadmap">
+      <div class="header">
+        <h2>ROAD MAP</h2>
+        <p>
+          Swissbit is bound to grow along the following pathway. Checkout our Project Roadmap
+        </p>
+      </div>
+      <div class="road-map container">
+        <div class="row road-map-row">
+          <div class="col-md-3 text-center first-row">
+            <div>The concept is in development</div>
+            <div>Nov 2018</div>
+          </div>
+          <div class="col-md-3 text-center first-row">
+            <div>Whitepaper Published</div>
+            <div>Jan 2019</div>
+          </div>
+          <div class="col-md-3 text-center first-row">
+            <div>Public sale</div>
+            <div>Mar 2019</div>
+          </div>
+          <div class="col-md-3 text-center first-row">
+            <div>Launch bank cards</div>
+            <div>Aug-Sep 2019</div>
+          </div>
+        </div>
+        <img class="road-map-icon" src="Frontend/Frontend/roadmap2.2.png" />
+        <div class="row road-map2-row">
+          <div class="col-md-2 text-center">
+            <p>Oct 2018</p>
+            <p>The concept is born</p>
+          </div>
+          <div class="col-md-2 text-center spe-item">
+            <p>Dec 2018</p>
+            <p>
+              Built our team<br>
+              Company Establishment
+            </p>
+          </div>
+          <div class="col-md-2 text-center spe-item">
+            <p>Feb 2019</p>
+            <p>
+              Swissbit Ico launch<br>
+              Pre-sale start
+            </p>
+          </div>
+          <div class="col-md-2 text-center spe-item">
+            <p>May 2019</p>
+            <p>Launch Swissbit Exchange</p>
+          </div>
+          <div class="col-auto text-center">
+            <p>Dec 2019</p>
+            <p>
+              Aggressive Marketing and<br>
+              Crowd exposure
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="road-map background-white">
+      <div class="header">
+        <h2>Our ICO Distribution</h2>
+        <p>
+          Following is the depiction of Swissbit Tokens allocation/distribution
+        </p>
+      </div>
+      <div class="content container">
+        <div class="col-md-6" style="display: flex;align-items: center;">
+          <img class="trade-mining-icon" src="Frontend/Frontend/Ico-fund.png" />
+        </div>
+        <div class="col-md-6">
+          <div class="header">
+            <h2>ICO FUNDS Distribution</h2>
+          </div>
+          <ul class="font-xsm ico-fund">
+            <li>
+              <img src="Frontend/Frontend/Path 210.png" alt="" class="ico-fund-item">
+              <span>50% Obtaining banking licenses and maintaining the bank liquidity</span>
+            </li>
+            <li>
+              <img src="Frontend/Frontend/Path 211.png" alt="" class="ico-fund-item">
+              <span>30% Development and Integration of lending Platform and maintaining liquidity</span>
+            </li>
+            <li>
+              <img src="Frontend/Frontend/Path 212.png" alt="" class="ico-fund-item">
+              <span>10% Develop the exchange with latest technology and Security</span>
+            </li>
+            <li>
+              <img src="Frontend/Frontend/Path 213.png" alt="" class="ico-fund-item">
+              <span>10% Marketing and Development of financial service</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header">
+        <h2>Our Token Allocation</h2>
+        <p>
+          The total supply of the token will be 200 Million
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="road-map background-gray" id="team">
+    <div class="header">
+      <h2>OUR TEAM</h2>
+      <p>Hello from the Swissbit Team Members</p>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-4 person">
+        <img src="Frontend/Frontend/Ceo1.png" class="member-icon" />
+        <div class="text-center margin-top-sm">
+          <strong><a href="#">Steven Mayer</a></strong>
+          <p class="text-italic">CEO & Founder</p>
+        </div>
+      </div>
+      <div class="col-md-4 person">
+        <img src="Frontend/Frontend/Ceo2.png" class="member-icon" />
+        <div class="text-center margin-top-sm">
+          <strong><a href="#">John Bowers</a></strong>
+          <p class="text-italic">Co-founder</p>
+        </div>
+      </div>
+      <div class="col-md-4 person">
+        <img src="Frontend/Frontend/Ceo3.png" class="member-icon" />
+        <div class="text-center margin-top-sm">
+          <strong><a href="">Tanya Fletcher</a></strong>
+          <p class="text-italic">Designer</p>
+        </div>
+      </div>
+      <div class="col-md-4 person">
+        <img src="Frontend/Frontend/Ceo4.png" class="member-icon" />
+        <div class="text-center margin-top-sm">
+          <strong><a href="">Victor Miller</a></strong>
+          <p class="text-italic">Advisor</p>
+        </div>
+      </div>
+      <div class="col-md-4 person">
+        <img src="Frontend/Frontend/Ceo5.png" class="member-icon" />
+        <div class="text-center margin-top-sm">
+          <strong><a href="">Bradford Chandler</a></strong>
+          <p class="text-italic">Marketing</p>
+        </div>
+      </div>
+      <div class="col-md-4 person">
+        <img src="Frontend/Frontend/Ceo6.png" class="member-icon" />
+        <div class="text-center margin-top-sm">
+          <strong><a href="">Blake Rios</a></strong>
+          <p class="text-italic">Technical Lead</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="road-map background-blue">
+    <div class="header text-white">
+      <h2>Major Press Releases</h2>
+    </div>
+    <div class="row text-center margin-top-md">
+      <div class="col-md-4 press-item">
+        <a href="#"><img src="Frontend/Frontend/blockonomi.png" class="press-icon" /></a>
+
+      </div>
+      <div class="col-md-4 press-item">
+        <a href="#"><img src="Frontend/Frontend/coinbureau.png" class="press-icon" /></a>
+
+      </div>
+      <div class="col-md-4 press-item">
+        <a href="#"><img src="Frontend/Frontend/coinedict.png" class="press-icon" /></a>
+
+      </div>
+      <div class="col-md-4 press-item">
+        <a href="#"><img src="Frontend/Frontend/coinidol.png" class="press-icon" /></a>
+
+      </div>
+      <div class="col-md-4 press-item">
+        <a href="#"><img src="Frontend/Frontend/coinspeaker.png" class="press-icon" /></a>
+
+      </div>
+      <div class="col-md-4 press-item">
+        <a href="#"><img src="Frontend/Frontend/digitaljournal.png" class="press-icon" /></a>
+
+      </div>
+      <div class="col-md-4 press-item">
+        <a href="#"><img src="Frontend/Frontend/investing.png" class="press-icon"></a>
+
+      </div>
+      <div class="col-md-4 press-item">
+        <a href="#"><img src="Frontend/Frontend/nasdaq.png" class="press-icon"></a>
+
+      </div>
+      <div class="col-md-4 press-item">
+        <a href="#"><img src="Frontend/Frontend/odyssey.png" class="press-icon"></a>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="faqs">
+    <div class="header">
+      <h2>FAQS</h2>
+      <p>Get answer to general queries related to ICOs and Project Swissbit</p>
+    </div>
+    <div class="margin-top-ct container">
+      <ul class="faq-list">
+        <li id="general" class="faq-item width-xs" onclick="onSelectFaqTab('general')">
+          GENERAL
+        </li>
+        <li id="offer" class="faq-item width-md faq-active" onclick="onSelectFaqTab('offer')">
+          PRE-TOKEN OFFERING & TOKEN OFFERING
+        </li>
+        <li id="token" class="faq-item width-xs" onclick="onSelectFaqTab('token')">
+          TOKEN
+        </li>
+        <li id="client" class="faq-item width-xs" onclick="onSelectFaqTab('client')">
+          CLIENT
+        </li>
+        <li id="legal" class="faq-item width-xs" onclick="onSelectFaqTab('legal')">
+          LEGAL
+        </li>
+      </ul>
+      <div class="question-list">
+        <div class="question-item">
+          <div class="row">
+            <span class="question-title">What is Pre sale ?</span>
+            <span class="fa fa-angle-down question-icon" id="menu-toggle1"></span>
+          </div>
+          <div id="toggleItem1" class="toggled">
+            <ul>
+              <li>Answer 1</li>
+              <li>Answer 2</li>
+              <li>Answer 3</li>
+            </ul>
+          </div>
+        </div>
+        <div class="question-item">
+          <div class="row">
+            <span class="question-title">When does the Pre sales start ?</span>
+            <span class="fa fa-angle-down question-icon" id="menu-toggle2"></span>
+          </div>
+          <div id="toggleItem2" class="toggled">
+            <ul>
+              <li>Answer 1</li>
+              <li>Answer 2</li>
+              <li>Answer 3</li>
+            </ul>
+          </div>
+        </div>
+        <div class="question-item">
+          <div class="row">
+            <span class="question-title">How may I take part in the pre sale ?</span>
+            <span class="fa fa-angle-down question-icon" id="menu-toggle3"></span>
+          </div>
+          <div id="toggleItem3" class="toggled">
+            <ul>
+              <li>Answer 1</li>
+              <li>Answer 2</li>
+              <li>Answer 3</li>
+            </ul>
+          </div>
+        </div>
+        <div class="question-item">
+          <div class="row">
+            <span class="question-title">What is Token sale and pre sale ?</span>
+            <span class="fa fa-angle-down question-icon" id="menu-toggle4"></span>
+          </div>
+          <div id="toggleItem4" class="toggled">
+            <ul>
+              <li>Answer 1</li>
+              <li>Answer 2</li>
+              <li>Answer 3</li>
+            </ul>
+          </div>
+        </div>
+        <div class="question-item">
+          <div class="row">
+            <span class="question-title">How to buy STB tokens ?</span>
+            <span class="fa fa-angle-down question-icon" id="menu-toggle5"></span>
+          </div>
+          <div id="toggleItem5" class="toggled">
+            <ul>
+              <li>Answer 1</li>
+              <li>Answer 2</li>
+              <li>Answer 3</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="road-map background-gray" style="padding-bottom: 15px;">
+    <div class="header">
+      <h2>CONTACT US</h2>
+    </div>
+    <div class="row text-center margin-top-lg container-fluid">
+      <div class="row col-md-12">
+        <div class="col-md-6">
+          <input class="col-md-12 contact-item form-control" placeholder="Name" />
+        </div>
+        <div class="col-md-6">
+          <input class="col-md-12 contact-item form-control" placeholder="Email" />
+        </div>
+      </div>
+      <div class="row col-md-12 margin-top-sm">
+        <div class="col-md-6">
+          <input class="col-md-12 contact-item form-control" placeholder="Telephone" />
+        </div>
+        <div class="col-md-6">
+          <input class="col-md-12 contact-item form-control" placeholder="Address" />
+        </div>
+      </div>
+      <div class="row col-md-12 margin-top-sm">
+        <div class="col-md-12">
+          <textarea name="textarea" class="col-md-12 form-control" placeholder="Your message" rows="10"></textarea>
+        </div>
+        <div class="col-md-3 text-left margin-top-sm">
+          <button class="btn btn-send">SEND</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="footer">
+    <nav class="navbar-expand-lg bg-blue nav-footer">
+      <div class="row">
+        <div class="col-md-6">
+          <div style="width: 25%">
+            <img src="img/header-icon.png" />
+          </div>
+
+          <ul class="navbar-nav" style="width: 100%;">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">WHITEPAPER</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">TOKEN SALE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ROAD MAP</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">MVP</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">TEAM</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div id="footer-header">
+            <strong class="text-white">FOLLOW US</strong>
+          </div>
+          <ul class="navbar-nav" style="width: 100%; justify-content: flex-end;text-align: center">
+            <li class="nav-item active">
+              <img src="img/fb.png" class="footer-icon" />
+            </li>
+            <li class="nav-item">
+              <img src="img/se.png" class="footer-icon" />
+            </li>
+            <li class="nav-item">
+              <img src="img/in.png" class="footer-icon" />
+            </li>
+            <li class="nav-item">
+              <img src="img/f4.png" class="footer-icon" />
+            </li>
+            <li class="nav-item">
+              <img src="img/f5.png" class="footer-icon" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <script src="script/countdountTImer.js"></script>
+  <script src="script/index.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      myVideo = document.getElementById("video1");
+      jQuery('#myModal1').on('hidden.bs.modal', function (e) {
+        e.preventDefault();
+        myVideo.pause();
+      })
+    })
+  </script>
+</body>
+
+</html>

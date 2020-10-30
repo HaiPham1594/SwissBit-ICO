@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Setting</title>
+
+    <!-- Bootstrap 4 -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Font awesome 5.7.2 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/setting.css"/>
+  </head>
+
+  <body class="home">
+      <div id="wrapper" class="toggled">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+          <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="dashboard.html" style="margin-top: auto;margin-bottom: auto;"><img src="img/header-icon.png" style="width: 65%;height: 50px;"></a>
+            </li>
+            <li>
+              <img src="img/dashboard/b.png" class="slider-icon" />
+              <a href="tokenPurchase.html">Token Purchase</a>
+            </li>
+            <li>
+              <img src="img/dashboard/user1.png" class="slider-icon" />
+              <a href="user.html">User</a>
+            </li>
+            <li>
+              <img src="img/dashboard/transition1.png" class="slider-icon" />
+              <a href="transaction.html">Transaction</a>
+            </li>
+            <li>
+              <img src="img/dashboard/marketing.png" class="slider-icon" />
+              <a href="marketing.html">Marketing Suite</a>
+            </li>
+            <li onclick="loadSetting()">
+              <img src="img/dashboard/setting.png" class="slider-icon" />
+              <a href="setting.html">Setting</a>
+            </li>
+            <li>
+              <img src="img/dashboard/airdrop.png" class="slider-icon" />
+              <a href="refund.html">Refund</a>
+            </li>
+            <li>
+              <img src="img/dashboard/token.png" class="slider-icon" />
+              <a href="tokenDelivery.html">Token Delivery</a>
+            </li>
+            <li>
+              <img src="img/dashboard/report.png" class="slider-icon" />
+              <a href="report.html">Report</a>
+            </li>
+            <li>
+              <img src="img/dashboard/logout.png" class="slider-icon" />
+              <a href="#">Log out</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper" style="width: 100%;">
+            <div class="toggle-header container-fluid">
+                <ul class="row menu">
+                  <li class="col-md-1" style="padding-left: 20px">
+                    <img
+                      src="img/dashboard/menu.png"
+                      id="menu-toggle"
+                      class="dashboard-header-icon"
+                    />
+                  </li>
+                  <li class="col-md-8" style="display: flex">
+                    <!-- <img src="img/dashboard/search.png" class="dashboard-header-icon" id="search-toggle"> -->
+                    <input
+                      class="form-control"
+                      id="search-form"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                  </li>
+                  <li
+                    class="col-md-1"
+                    style="display: flex; justify-content: flex-end; padding: 0"
+                  >
+                    <img
+                      src="img/dashboard/bell.png"
+                      class="dashboard-header-icon"
+                      data-container="body"
+                      data-toggle="popover"
+                      data-placement="bottom"
+                      data-content="You have 20 notifications"
+                    />
+                  </li>
+                  <li
+                    class="col-md-1"
+                    style="display: flex; justify-content: center; padding: 0"
+                  >
+                    <img
+                      src="img/dashboard/wallet.png"
+                      class="dashboard-header-icon"
+                      data-toggle="popover"
+                      data-html="true"
+                      data-placement="bottom"
+                      data-content="<em>btc:</em> <b>2.7</b> <span><img src='img/dashboard/b_blue.png' class='bitcoin-tiny'></span>"
+                    />
+                  </li>
+                  <li class="col-md-1" style="padding: 0">
+                    <div style="padding-top: 4px">
+                      <div
+                        class="adminCircle"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Admin"
+                      >
+                        <img
+                          src="img/dashboard/admin.png"
+                          class="dashboard-header-icon"
+                          data-toggle="modal"
+                          data-target="#exampleModal"
+                        />
+                      </div>
+                      <div
+                        class="modal fade"
+                        id="exampleModal"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">
+                                Confirm Log Out Dashboard Site
+                              </h5>
+                              <button
+                                type="button"
+                                class="close"
+                                data-dismiss="modal"
+                                aria-label="Close"
+                              >
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <b>You want to Log out ?</b>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-primary">
+                                Log out
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-dismiss="modal"
+                              >
+                                Cancel
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+            </div>
+  
+          <div class="card no-padding-top" style="background: #F1F1F1;">
+            <div class="card-header no-boder">
+              <strong class="font-sm">Setting</strong>
+            </div>
+            <div class="text-center">
+              <b class="font-md"
+                ><img src="Backend/Settings/Group 48.png" alt="" /> Countdown &
+                MVP</b>
+                <br/>
+              <div countdown="" data-date="Feb 14 2020 07:30:00" class="row countdountTimer">
+                  <div class="timer">
+                    <b data-days=""></b>
+                  </div>
+                  <b>:</b>
+                  <div class="timer">
+                    <b data-hours=""></b>
+                  </div>
+                  <b>:</b>
+                  <div class="timer">
+                    <b data-minutes=""></b>
+                  </div>
+                  <b>:</b>
+                  <div class="timer">
+                    <b data-seconds=""></b>
+                  </div>
+                </div>
+            </div>
+            <div class="mvp-box font-sm">
+              <div class="mvp">MVP</div>
+              <div class="btns">
+                <div class="btn-u"><button class="btn-y u">Upload</button></div>
+                <div><button class="btn-y r">Reset & Update</button></div>
+              </div>
+            </div>
+  
+            <div class="info">
+              <div class="dash-item col-auto">
+                <div class="item-header flexi">
+                  <img src="img/dashboard/b_blue.png" class="bitcoin" />
+                  <span class="font-sm">Change Languages</span>
+                </div>
+                <div class="item-body col-language">
+                  <div>
+                    <input type="checkbox" class="language-check" />
+                    <span class="font-sm language">English</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" class="language-check" />
+                    <span class="font-sm language">France</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" class="language-check" />
+                    <span class="font-sm language">Italian</span>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="dash-item">
+                <div class="item-header flexi">
+                  <img src="img/dashboard/b_blue.png" class="bitcoin" />
+                  <span class="font-sm">Prepare Card</span>
+                </div>
+                <div class="item-body col-class">
+                  <div>
+                    <input type="checkbox" class="language-check" />
+                    <span class="font-sm language">Basic</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" class="language-check" />
+                    <span class="font-sm language">Gold</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" class="language-check" />
+                    <span class="font-sm language">Premium</span>
+                  </div>
+                </div>
+                <div class="pp-card"><button class="btn-y u">Upload</button></div>
+              </div>
+  
+              <div class="dash-item text-center">
+                <div class="item-header flexi">
+                  <span class="font-sm">Maintance</span>
+                </div>
+                <div class="item-body">
+                  <img src="Backend/Settings/Group 50.png" class="chart-icon" />
+                </div>
+              </div>
+            </div>
+  
+            <div class="info">
+              <div class="info-item text-center col-auto">
+                <div class="item-header">
+                  <div class="font-sm ">Change Promoclip</div>
+                </div>
+                <div class="item-body-f">
+                  <!-- <div class="frame"></div> -->
+                  <img
+                    src="Backend/Settings/Rectangle 34.png"
+                    alt=""
+                    class="frame"
+                  />
+                  <div class="btn-in-frame">
+                    <button class="btn-y u">Update</button>
+                  </div>
+                </div>
+              </div>
+              <div class="info-item text-center col-auto">
+                <div class="item-body-f">
+                  <div>
+                    <div class="font-sm ">Trademining</div>
+                    <img
+                      src="Backend/Settings/Rectangle 37.png"
+                      alt=""
+                      class="frame"
+                    />
+                    <div class="btn-in-frame">
+                      <button class="btn-y u">Update</button>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="font-sm ">Lending & Loan</div>
+                    <img
+                      src="Backend/Settings/Rectangle 37.png"
+                      alt=""
+                      class="frame"
+                    />
+                    <div class="btn-in-frame">
+                      <button class="btn-y u">Update</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-header no-boder">
+              <strong class="font-sm">Other Setting</strong>
+            </div>
+            <div class="Os">
+              <div class="bar-group">
+                <div class="col-one font-sm">Roadmap:</div>
+                <div class="icon-bar">
+                  <span class="icon-item"><img src="Backend/Settings/Ellipse 10.png" alt=""></span>
+                  <div class="space-gear"></div>
+                  <span class="icon-item"><img src="Backend/Settings/Ellipse 10.png" alt=""></span>
+                  <div class="space-gear"></div>
+                  <span class="icon-item"><img src="Backend/Settings/Ellipse 10.png" alt=""></span>
+                  <div class="space-gear"></div>
+                  <span class="icon-item"><img src="Backend/Settings/Ellipse 10.png" alt=""></span>
+                  <div class="space-gear"></div>
+                  <span class="icon-item"><img src="Backend/Settings/Ellipse 10.png" alt=""></span>
+                  <div class="space-gear"></div>
+                  <span class="icon-item"><img src="Backend/Settings/Ellipse 10.png" alt=""></span>
+                  <div class="space-gear"></div>
+                  <span class="icon-item"><img src="Backend/Settings/Ellipse 10.png" alt=""></span>
+                  <div class="space-gear"></div>
+                  <span class="icon-item"><img src="Backend/Settings/Ellipse 10.png" alt=""></span>
+                  
+                </div>
+              </div>
+              <div class="bar-group">
+                  <div class="col-one font-sm">Featured in:</div>
+                  <div class="icon-bar" style="background: none;">
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span>
+                      <div class="space-gear"></div>
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span>
+                      <div class="space-gear"></div>
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span>
+                      <div class="space-gear"></div>
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span>
+                      <div class="space-gear"></div>
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span>
+                      <div class="space-gear"></div>
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span>
+                      <div class="space-gear"></div>
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span>
+                      <div class="space-gear"></div>
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span>
+                                   
+                  </div>
+              </div>
+              <div class="bar-group">
+                  <div class="col-one font-sm">Team:</div>
+                  <div class="icon-bar" style="background: none;">
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 47.png" alt=""></span>
+                      <div class="space-gear"></div>
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 47.png" alt=""></span>
+                      <div class="space-gear"></div>
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 47.png" alt=""></span>
+                      <div class="space-gear"></div>
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 47.png" alt=""></span>
+                      <div class="space-gear"></div>
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 47.png" alt=""></span>
+                      <div class="space-gear"></div>
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 47.png" alt=""></span>
+                      <div class="space-gear"></div>
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 47.png" alt=""></span>
+                      <div class="space-gear"></div>
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 47.png" alt=""></span>
+                                    
+                  </div>
+              </div>
+              <div class="bar-group">
+                  <div class="col-one font-sm">News:</div>
+                  <div class="icon-bar" style="background: none;">
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span>
+                      <div class="space-gear"></div>
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span>
+                      <div class="space-gear"></div>
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span>
+                      <div class="space-gear"></div>
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span>
+                      <div class="space-gear"></div>
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span>
+                      <div class="space-gear"></div>
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span>
+                      <div class="space-gear"></div>
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span>
+                      <div class="space-gear"></div>
+                      <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span>
+                                    
+                  </div>
+              </div>
+              <div class="bar-group">
+                  <div class="col-one font-sm">FAQs:</div>
+                  <div class="icon-bar" style="background: none;">
+                    <!-- <span class="icon-item">GENERAL</span> -->
+                  <!-- <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span> -->
+                  <div style="width: 20%; border-right: 2px solid #004680" class="space-gear"><span class="font-xsm">GENERAL</span></div>
+                    <!-- <span class="icon-item">PRE TOKEN OFFERING & TOKEN OFFERING</span> -->
+                  <!-- <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span> -->
+                  <div style="width: 60%; border-right: 2px solid #004680" class="space-gear text-center"><span class="font-xsm">PRE TOKEN OFFERING & TOKEN OFFERING</span></div>
+                    <!-- <span class="icon-item">TOKEN</span> -->
+                  <!-- <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span> -->
+                  <div style="width: 10%; border-right: 2px solid #004680" class="space-gear text-center"><span class="font-xsm">TOKEN</span></div>
+                    <!-- <span class="icon-item">CLIENT</span> -->
+                  <!-- <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span> -->
+                  <div style="width: 10%; border-right: 2px solid #004680" class="space-gear text-center"><span class="font-xsm">CLIENT</span></div>
+                    <!-- <span class="icon-item">LEGAL</span> -->
+                  <!-- <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span> -->
+                  <div style="width: 10%" class="space-gear text-right"><span class="font-xsm">LEGAL</span></div>
+                  <!-- <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span> -->
+                  <!-- <div style="width: 10%" class="space-gear"></div> -->
+                  <!-- <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span> -->
+                  <!-- <div style="width: 10%" class="space-gear"></div> -->
+                  <!-- <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span> -->
+                  <!-- <div style="width: 10%" class="space-gear"></div> -->
+                  <!-- <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span> -->
+                  <!-- <div style="width: 10%" class="space-gear"></div> -->
+                  <!-- <span class="icon-item"><img src="Backend/Settings/Rectangle 39.png" alt=""></span>                -->
+                  </div>
+              </div>
+            </div>
+            </div>
+            <div class="card-header no-boder text-color">
+              <strong class="font-sm">Footer</strong>
+            </div>
+            <div class="footer text-color">
+              <!-- <div class="row justify-content-between"> -->
+                <div class="footer-item">HOME</div>
+                <div class="footer-item">WHITE PAPER</div>
+                <div class="footer-item">TOKEN SALE</div>
+                <div class="footer-item">ROADMAP</div>
+                <div class="footer-item">MVP</div>
+                <div class="footer-item">TEAM</div>
+              <!-- </div> -->
+            </div>
+  
+            <div class="card-header no-boder text-color">
+              <strong class="font-sm">Follow</strong>
+            </div>
+
+            <div class="footer text-color">
+              <div>
+                <img src="Backend/Settings/Path 150.png" alt="" />
+                <div>Link</div>
+              </div>
+              <div>
+                <img src="Backend/Settings/Group 105.png" alt="" />
+                <div>Link</div>
+              </div>
+              <div>
+                <img src="Backend/Settings/Path 151.png" alt="" />
+                <div>Link</div>
+              </div>
+              <div>
+                <img src="Backend/Settings/Group 107.png" alt="" />
+                <div>Link</div>
+              </div>
+              <div>
+                <img src="Backend/Settings/Path 149.png" alt="" />
+                <div>Link</div>
+              </div>
+            </div>
+  
+            <div class="card-header no-boder text-color">
+              <strong class="font-sm">Site Details</strong>
+              <p class="sub-title wt">
+                Configure the basic details about your token dashboard
+              </p>
+            </div>
+            <div class="container container-fluid text-color">
+              <form>
+                <div class="form-group">
+                  <label for="adminName">Administrator Name</label>
+                  <input type="text" class="form-control" placeholder="Admin" />
+                </div>
+                <div class="form-group">
+                  <label for="emailAddress">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="admin@icostudio.online"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="adminName">Site Title</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Tokendash"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="adminName">Token Launch Countdown Timer</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    placeholder="01/01/2019"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="whitePaper">White paper</label>
+                  <input type="file" class="form-control-file" id="whitePaper" />
+                  <p class="wt">Click here to view</p>
+                </div>
+                <div class="form-group">
+                  <label for="whitePaper">Site Logo (200*34)</label>
+                  <input type="file" class="form-control-file" id="whitePaper" />
+                </div>
+                <div class="form-group">
+                  <label for="whitePaper">Fav Token (32*32)</label>
+                  <input type="file" class="form-control-file" id="whitePaper" />
+                </div>
+                <button type="button" class="btn-y s">Save</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="script/dashboard.js"></script>
+      <script src="script/countdountTImer.js"></script>
+      <script>
+          $(function() {
+            $('[data-toggle="popover"]').popover();
+            $('[data-toggle="tooltip"]').tooltip();
+          });
+      </script>
+    </body>
+</html>
